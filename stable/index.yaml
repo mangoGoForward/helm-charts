@@ -2,11 +2,31 @@ apiVersion: v1
 entries:
   chaos-mesh:
   - apiVersion: v2
-    appVersion: 2.0.3
-    created: "2021-10-29T08:58:28.221868739Z"
+    appVersion: 2.0.4
+    created: "2021-12-27T03:26:17.907472556Z"
     description: Chaos Mesh® is a cloud-native Chaos Engineering platform that orchestrates
       chaos on Kubernetes environments.
-    digest: f590225cfda344993f4757fb551224f28213cb0fdad7a70515be250d5483fecc
+    digest: 3a48e94755938e6b1d2a5322c11650af15bb5287666538539b892df1afe6c8f3
+    home: https://chaos-mesh.org
+    icon: https://raw.githubusercontent.com/pingcap/chaos-mesh/master/static/logo.svg
+    keywords:
+    - chaos-engineering
+    - resiliency
+    - fault-injection
+    - kubernetes
+    - testing
+    name: chaos-mesh
+    sources:
+    - https://github.com/pingcap/chaos-mesh
+    urls:
+    - https://charts.kubesphere.io/stable/chaos-mesh-2.0.4.tgz
+    version: 2.0.4
+  - apiVersion: v2
+    appVersion: 2.0.3
+    created: "2021-11-25T06:01:26.889811233Z"
+    description: Chaos Mesh® is a cloud-native Chaos Engineering platform that orchestrates
+      chaos on Kubernetes environments.
+    digest: 88097c8a0c48465d91c7528b2953dae84b06169e3acdaa5c104982a7be1ce0a1
     home: https://chaos-mesh.org
     icon: https://raw.githubusercontent.com/pingcap/chaos-mesh/master/static/logo.svg
     keywords:
@@ -21,7 +41,149 @@ entries:
     urls:
     - https://charts.kubesphere.io/stable/chaos-mesh-2.0.3.tgz
     version: 2.0.3
+  fpga-operator:
+  - annotations:
+      app.kubesphere.io/category: Infrastructure
+      app.kubesphere.io/display-name: InAccel FPGA Operator
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: Documentation
+          url: https://docs.inaccel.com
+      category: Infrastructure
+    apiVersion: v2
+    appVersion: "2.1"
+    created: "2021-11-24T12:48:13.482556686Z"
+    dependencies:
+    - alias: fpga-discovery
+      condition: fpga-discovery.enabled
+      name: node-feature-discovery
+      repository: https://kubernetes-sigs.github.io/node-feature-discovery/charts
+      version: 0.9.0
+    description: Simplifying FPGA management in Kubernetes
+    digest: 5f1e04c63d2679ac069c546cb58f501738a2e9a1c1544f4818fa071f04756995
+    home: https://inaccel.com
+    icon: https://en.gravatar.com/userimage/147236320/2a11cd2992b4521ec287587f03fae35c.png?size=1250
+    keywords:
+    - fpga
+    - infrastructure
+    kubeVersion: '>= 1.18.0-0'
+    maintainers:
+    - email: info@inaccel.com
+      name: InAccel
+    name: fpga-operator
+    sources:
+    - https://docs.inaccel.com
+    - https://github.com/inaccel/helm
+    type: application
+    urls:
+    - https://charts.kubesphere.io/stable/fpga-operator-2.6.1.tgz
+    version: 2.6.1
+  juicefs:
+  - apiVersion: v2
+    appVersion: 0.11.0
+    created: "2021-11-24T15:14:19.305212363Z"
+    description: A Helm chart for JuiceFS CSI Driver
+    digest: 6c0f23b4c11247957d349f066d268e67bb9e6191cd06544c7551d2eed10b4bb3
+    home: https://github.com/juicedata/juicefs
+    icon: https://s.juicefs.com/static/jfs/logo.svg
+    keywords:
+    - juicefs
+    - csi
+    kubeVersion: '>=1.14.0-0'
+    maintainers:
+    - email: team@juicedata.io
+      name: Juicedata Inc
+    name: juicefs
+    sources:
+    - https://github.com/juicedata/juicefs
+    type: application
+    urls:
+    - https://charts.kubesphere.io/stable/juicefs-0.7.0.tgz
+    version: 0.7.0
+  - apiVersion: v2
+    appVersion: 0.10.6
+    created: "2021-11-11T09:02:02.1052406Z"
+    description: A Helm chart for JuiceFS CSI Driver
+    digest: 997e39950ff48d9e8afd997d37546d51d6f5a3bd70fcf5c3c1caf66f2602a244
+    home: https://github.com/juicedata/juicefs
+    icon: https://s.juicefs.com/static/jfs/logo.svg
+    keywords:
+    - juicefs
+    - csi
+    kubeVersion: '>=1.14.0-0'
+    maintainers:
+    - email: team@juicedata.io
+      name: Juicedata Inc
+    name: juicefs
+    sources:
+    - https://github.com/juicedata/juicefs
+    type: application
+    urls:
+    - https://charts.kubesphere.io/stable/juicefs-0.6.1.tgz
+    version: 0.6.1
   nocalhost:
+  - annotations:
+      category: App Definition and Development
+    apiVersion: v2
+    appVersion: v0.6.9
+    created: "2021-12-20T14:42:59.266715532Z"
+    dependencies:
+    - name: mariadb
+      repository: https://nocalhost-helm.pkg.coding.net/nocalhost/helm
+      version: 9.0.1
+    description: Nocalhost is Cloud Native Dev Environment.
+    digest: 8ddb5e9100b5d03bcc84d5f28f1d7bece20847d6e2f3266a51e871320be7bab5
+    home: https://nocalhost.dev
+    icon: https://nocalhost.dev/img/icon_helmchart.png
+    keywords:
+    - nocalhost
+    - nhctl
+    - kubernetes
+    - develop
+    - telepresence
+    - skaffold
+    kubeVersion: '>= 1.16.0-0'
+    maintainers:
+    - name: Nocalhost
+      url: https://github.com/nocalhost/nocalhost
+    name: nocalhost
+    sources:
+    - https://github.com/nocalhost/nocalhost
+    type: application
+    urls:
+    - https://charts.kubesphere.io/stable/nocalhost-0.6.9.tgz
+    version: 0.6.9
+  - annotations:
+      category: App Definition and Development
+    apiVersion: v2
+    appVersion: v0.6.4
+    created: "2021-11-08T04:27:48.620871967Z"
+    dependencies:
+    - name: mariadb
+      repository: https://nocalhost-helm.pkg.coding.net/nocalhost/helm
+      version: 9.0.1
+    description: Nocalhost is Cloud Native Dev Environment.
+    digest: c108d07895a0373f00791bfb84f0c2266e74ff673b727cd7a7de3c2bfc0a26f7
+    home: https://nocalhost.dev
+    icon: https://nocalhost.dev/img/icon_helmchart.png
+    keywords:
+    - nocalhost
+    - nhctl
+    - kubernetes
+    - develop
+    - telepresence
+    - skaffold
+    kubeVersion: '>= 1.16.0-0'
+    maintainers:
+    - name: Nocalhost
+      url: https://github.com/nocalhost/nocalhost
+    name: nocalhost
+    sources:
+    - https://github.com/nocalhost/nocalhost
+    type: application
+    urls:
+    - https://charts.kubesphere.io/stable/nocalhost-0.6.4.tgz
+    version: 0.6.4
   - annotations:
       category: App Definition and Development
     apiVersion: v2
@@ -84,4 +246,4 @@ entries:
     urls:
     - https://charts.kubesphere.io/stable/nocalhost-0.5.7.tgz
     version: 0.5.7
-generated: "2021-10-29T08:58:28.21332252Z"
+generated: "2021-12-27T03:26:17.899872922Z"
